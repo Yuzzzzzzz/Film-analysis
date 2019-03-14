@@ -118,4 +118,5 @@ plt.axis('off')     #不显示坐标
 plt.show()
 ```
 词云图
+
 ![](https://github.com/hzy-xiaoyuzhou/imag/blob/master/Shoplifters_image/%E5%B0%8F%E5%81%B7%E5%AE%B6%E6%97%8F.png?raw=true)
