@@ -7,7 +7,7 @@
 
 
 第一次就拿是枝裕和导演的《小偷家族》来试试手，是枝裕和是我最喜欢的日本导演，该片也荣获第71届戛纳电影节金棕榈，自己看完这部影片后感觉意犹未尽，接下来来看看豆瓣的网友对这部的感受是什么样的。
-![](https://github.com/hzy-xiaoyuzhou/imag/blob/master/1.png?raw=true)
+![](https://github.com/hzy-xiaoyuzhou/imag/blob/master/Shoplifters_image/1.png?raw=true)
 本文只是简单的对评论进行分析，所以只用爬取豆瓣网友对该片的评论即可。
 
 ### 一、数据获取
@@ -16,9 +16,12 @@
 
 
 观察短评页的url，往后一页翻可以发现url只有箭头指的值在改变，所以爬取时只用改变这个值就可以爬取所有页面的评论了
-![](https://github.com/hzy-xiaoyuzhou/imag/blob/3d5de225ecb1041960946f18c8f0b47643349990/2.png?raw=true)
+![](https://github.com/hzy-xiaoyuzhou/imag/blob/master/Shoplifters_image/2.png?raw=true)
+
+
 
 接着对页面进行分析，按F12打开开发者模式，可以找到评论文本字段的class为short
+![](https://github.com/hzy-xiaoyuzhou/imag/blob/master/Shoplifters_image/3.png?raw=true)
 
 ```python
 import requests
@@ -60,6 +63,7 @@ if __name__ == '__main__':
 ```
 
 点开review.txt发现爬虫已经把短评保存到里面了
+![](https://github.com/hzy-xiaoyuzhou/imag/blob/master/Shoplifters_image/4.png?raw=true)
 
 ### 二、数据分析
 将刚刚爬到的评论用jieba分词，然后用wordcloud做一个词云图来展示网友们对影片的评论。
@@ -113,3 +117,5 @@ plt.imshow(wc)
 plt.axis('off')     #不显示坐标
 plt.show()
 ```
+词云图
+![](https://github.com/hzy-xiaoyuzhou/imag/blob/master/Shoplifters_image/%E5%B0%8F%E5%81%B7%E5%AE%B6%E6%97%8F.png?raw=true)
